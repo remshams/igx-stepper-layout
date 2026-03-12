@@ -1,0 +1,37 @@
+<main class="app-shell">
+  <section class="app-card">
+    <p class="app-eyebrow">Angular 21 + Ignite UI for Angular</p>
+    <h1>{{ title() }}</h1>
+
+    <igx-stepper
+      #landingStepper
+      class="landing-stepper"
+      [animationDuration]="0"
+      orientation="vertical"
+      (activeStepChanged)="activeStepIndex.set($event.index)">
+      <igx-step>
+        <span igxStepTitle>Step 1</span>
+
+        <div igxStepContent class="step-pane">
+          <p class="step-copy">Short placeholder content for the first step.</p>
+          <button type="button" class="step-action" (click)="landingStepper.navigateTo(1)">
+            Open step 2
+          </button>
+        </div>
+      </igx-step>
+
+      <igx-step [class.landing-step--active-fill]="isStepTwoActive()">
+        <span igxStepTitle>Step 2</span>
+
+        <div igxStepContent class="step-pane step-pane--fill">
+          <div class="step-fill-card">
+            <p class="step-copy">Placeholder content that stretches with the page.</p>
+            <button type="button" class="step-action" (click)="landingStepper.prev()">
+              Back to step 1
+            </button>
+          </div>
+        </div>
+      </igx-step>
+    </igx-stepper>
+  </section>
+</main>
