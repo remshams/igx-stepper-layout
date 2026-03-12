@@ -14,19 +14,23 @@
 
         <div igxStepContent class="step-pane">
           <p class="step-copy">Short placeholder content for the first step.</p>
-          <button type="button" class="step-action" (click)="landingStepper.navigateTo(1)">
+          @if (!isStepTwoActive()) {
+            <p class="step-copy step-copy--muted">Step 1 only uses the height it needs.</p>
+          }
+
+          <button type="button" class="step-action" (click)="goToStep(landingStepper, 1)">
             Open step 2
           </button>
         </div>
       </igx-step>
 
-      <igx-step [class.landing-step--active-fill]="isStepTwoActive()">
+      <igx-step class="landing-step--active-fill">
         <span igxStepTitle>Step 2</span>
 
         <div igxStepContent class="step-pane step-pane--fill">
           <div class="step-fill-card">
             <p class="step-copy">Placeholder content that stretches with the page.</p>
-            <button type="button" class="step-action" (click)="landingStepper.prev()">
+            <button type="button" class="step-action" (click)="goToStep(landingStepper, 0)">
               Back to step 1
             </button>
           </div>

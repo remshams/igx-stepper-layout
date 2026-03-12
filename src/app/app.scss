@@ -1,0 +1,110 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  padding: 1.5rem;
+}
+
+.app-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  width: min(100%, 48rem);
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 0.08);
+}
+
+.landing-stepper {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.app-eyebrow {
+  margin: 0 0 0.75rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0 0 1rem;
+}
+
+.step-pane {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+  padding: 0.25rem 0 1rem;
+}
+
+.step-pane--fill {
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+}
+
+.step-fill-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f9fafb;
+}
+
+.step-copy {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.step-copy--muted {
+  color: #6b7280;
+}
+
+.step-action {
+  padding: 0.625rem 0.875rem;
+  border: 0;
+  border-radius: 999px;
+  background: #1f2937;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+:host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] {
+  flex: 1;
+  min-height: 0;
+}
+
+:host ::ng-deep .landing-stepper > .igx-stepper__header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+:host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] > .igx-stepper__step-content-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+:host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] .igx-stepper__step-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
