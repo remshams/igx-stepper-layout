@@ -21,4 +21,9 @@ export class App {
   protected readonly title = signal('IGX Stepper Layout Test');
   protected readonly activeStepIndex = signal(0);
   protected readonly isStepTwoActive = computed(() => this.activeStepIndex() === 1);
+
+  protected goToStep(stepper: IgxStepperComponent, index: number): void {
+    this.activeStepIndex.set(index);
+    stepper.navigateTo(index);
+  }
 }
