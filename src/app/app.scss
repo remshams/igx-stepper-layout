@@ -97,13 +97,19 @@ h1 {
   min-height: 0;
 }
 
-:host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] > .igx-stepper__step-content-wrapper {
+:host
+  ::ng-deep
+  igx-step.landing-step--active-fill[aria-selected='true']
+  > .igx-stepper__step-content-wrapper {
   display: flex;
   flex: 1;
   min-height: 0;
 }
 
-:host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] .igx-stepper__step-content {
+:host
+  ::ng-deep
+  igx-step.landing-step--active-fill[aria-selected='true']
+  .igx-stepper__step-content {
   display: flex;
   flex: 1;
   min-height: 0;

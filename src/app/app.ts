@@ -3,19 +3,14 @@ import {
   IgxStepComponent,
   IgxStepContentDirective,
   IgxStepperComponent,
-  IgxStepTitleDirective
+  IgxStepTitleDirective,
 } from 'igniteui-angular';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    IgxStepperComponent,
-    IgxStepComponent,
-    IgxStepTitleDirective,
-    IgxStepContentDirective
-  ],
+  imports: [IgxStepperComponent, IgxStepComponent, IgxStepTitleDirective, IgxStepContentDirective],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('IGX Stepper Layout Test');
