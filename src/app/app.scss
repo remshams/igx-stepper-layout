@@ -83,9 +83,27 @@ h1 {
   color: white;
   font: inherit;
   cursor: pointer;
+  height: 100%;
 }
 
-:host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] {
+:host ::ng-deep {
+  &.igx-stepper__header,
+  .igx-stepper__step-content-wrapper,
+  .igx-stepper__step-content {
+    height: 100%;
+  }
+
+  /* &.igx-stepper__step:nth-child(2) {
+    justify-content: start;
+    height: 100%;
+  } */
+}
+
+.step2 {
+  height: 100%;
+}
+
+/* :host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] {
   flex: 1;
   min-height: 0;
 }
@@ -113,4 +131,4 @@ h1 {
   display: flex;
   flex: 1;
   min-height: 0;
-}
+} */

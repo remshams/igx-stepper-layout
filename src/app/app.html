@@ -16,7 +16,7 @@
         <div igxStepContent class="step-pane">
           <p class="step-copy">Short placeholder content for the first step.</p>
           @if (!isStepTwoActive()) {
-            <p class="step-copy step-copy--muted">Step 1 only uses the height it needs.</p>
+          <p class="step-copy step-copy--muted">Step 1 only uses the height it needs.</p>
           }
 
           <button type="button" class="step-action" (click)="goToStep(landingStepper, 1)">
@@ -25,7 +25,7 @@
         </div>
       </igx-step>
 
-      <igx-step class="landing-step--active-fill">
+      <igx-step class="landing-step--active-fill step2">
         <span igxStepTitle>Step 2</span>
 
         <div igxStepContent class="step-pane step-pane--fill">
