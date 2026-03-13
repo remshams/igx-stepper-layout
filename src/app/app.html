@@ -10,7 +10,7 @@
       orientation="vertical"
       (activeStepChanged)="activeStepIndex.set($event.index)"
     >
-      <igx-step>
+      <igx-step [class.step--full-height]="!isStepTwoActive()">
         <span igxStepTitle>Step 1</span>
 
         <div igxStepContent class="step-pane">
@@ -25,7 +25,7 @@
         </div>
       </igx-step>
 
-      <igx-step class="landing-step--active-fill step2">
+      <igx-step class="landing-step--active-fill" [class.step--full-height]="isStepTwoActive()">
         <span igxStepTitle>Step 2</span>
 
         <div igxStepContent class="step-pane step-pane--fill">

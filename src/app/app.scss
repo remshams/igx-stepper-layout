@@ -92,15 +92,18 @@ h1 {
   .igx-stepper__step-content {
     height: 100%;
   }
+}
 
-  /* &.igx-stepper__step:nth-child(2) {
-    justify-content: start;
-    height: 100%;
-  } */
+.step--full-height {
+  height: 100%;
+}
+
+.step1 {
+  flex-grow: 1;
 }
 
 .step2 {
-  height: 100%;
+  flex-grow: 2;
 }
 
 /* :host ::ng-deep igx-step.landing-step--active-fill[aria-selected='true'] {
